@@ -69,3 +69,64 @@ header span {
 .mobile {
 	display: none;
 }
+
+/* Learn Something New Everyday */
+
+.container {
+	width: 100%;
+	background-color: rgb(137, 234, 255);
+	position: relative;
+	z-index: 15;
+	top: 4rem;
+	display: flex;
+}
+
+.learncontent {
+	display: flex;
+	padding: 32px 24px;
+}
+
+.imaging {
+	display: flex;
+	width: 60%;
+	margin-right: 40px;
+}
+
+.imagebox img {
+	max-width: 100%;
+	height: auto;
+}
+
+img {
+	border-style: none;
+}
+
+.mobilegraybox {
+	display: none;
+}
+
+.learnbox {
+	color: rgb(16,16,16);
+	margin-top: 3rem;
+	line-height: 1.3;
+	width: 22rem;
+	display: block;
+}
+
+.learnbox h1 {
+	font-weight: bold;
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	width: 90%;
+}
+
+h1 {
+	margin: 0.67em 0;
+}
+
+.learnbox p {
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+	width: 90%;
+	font-weight: 300;
+}
