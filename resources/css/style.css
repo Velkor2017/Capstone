@@ -1,0 +1,71 @@
+/* Universal Styles */
+
+html {
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 16px;
+	background-color: rgb(52,89,97);
+	line-height: 1.15;
+}
+
+body {
+	margin: 0 auto;
+	width: 1080px;
+}
+
+/* Header Section */
+
+header {
+	position: fixed;
+	z-index: 20;
+	top: 0;
+	height: 4rem;
+	width: 1080px;
+	display: flex;
+	align-items: center;
+	background-color: white;
+}
+
+#logo {
+	display: flex;
+	align-items: center;
+	flex-grow: 1;
+	margin-left: 24px;
+	margin-right: 8px;
+}
+
+a {
+	background-color: transparent;
+}
+
+#logo img {
+	height: 3rem;
+	display: flex;
+}
+
+img {
+	border-style: none;
+}
+
+#colmar {
+	font-weight: bold;
+}
+
+header span {
+	font-size: 1.33rem;
+	color: rgb(64, 64, 64);
+}
+
+.desktop {
+	margin-right: 1rem;
+}
+
+.desktop a {
+	text-decoration: none;
+	font-size: 1rem;
+	padding: 0.5rem;
+	color: rgb(64, 64, 64);
+}
+
+.mobile {
+	display: none;
+}
