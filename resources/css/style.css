@@ -12,6 +12,16 @@ body {
 	width: 1080px;
 }
 
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
 /* Header Section */
 
 header {
@@ -42,17 +52,27 @@ a {
 	display: flex;
 }
 
+#logo a:hover {
+	background-color: rgb(213,248,255);
+}
+
+#logo a:active {
+	color: rgb(52,89,97);
+	font-size: 1.33rem;
+}
+
 img {
 	border-style: none;
 }
 
 #colmar {
 	font-weight: bold;
+	color: rgb(64, 64, 64); 
 }
 
 header span {
 	font-size: 1.33rem;
-	color: rgb(64, 64, 64);
+	color: rgb(52,89,97);
 }
 
 .desktop {
@@ -66,15 +86,91 @@ header span {
 	color: rgb(64, 64, 64);
 }
 
+nav a:hover {
+	color: white;
+	background-color: black;
+	border-radius: 5px;
+}
+
+nav a:active {
+	color: rgb(213,248,255);
+	background-color: black;
+	border-radius: 5px;
+}
+
 .mobile {
 	display: none;
+}
+
+@media only screen and (max-width: 1079px) {
+
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-content: center;
+	}
+
+	#logo {
+		display: none;
+	}
+
+	.mobile img {
+		height: 32px;
+	}
+
+	.mobile a:hover {
+		background-color: rgb(255,233,155);
+		border-radius: 5px; 
+	}
+
+	.mobile a:active {
+		background-color: orange;
+		border-radius: 5px;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+
+	.desktop {
+		display: none;
+	}
+
+	.mobile {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+		align-content: center;
+	}
+
+	#logo {
+		display: none;
+	}
+
+	.mobile img {
+		height: 32px;
+	}
+
+	.mobile a:hover {
+		background-color: rgb(255,233,155);
+		border-radius: 5px
+	}
+
+	.mobile a:active {
+		background-color: orange;
+		border-radius: 5px;
+	}
 }
 
 /* Learn Something New Everyday */
 
 .container {
 	width: 100%;
-	background-color: rgb(137, 234, 255);
+	background-color: rgb(137,234,255);
 	position: relative;
 	z-index: 15;
 	top: 4rem;
@@ -95,10 +191,6 @@ header span {
 .imagebox img {
 	max-width: 100%;
 	height: auto;
-}
-
-img {
-	border-style: none;
 }
 
 .mobilegraybox {
@@ -129,4 +221,272 @@ h1 {
 	margin-bottom: 2rem;
 	width: 90%;
 	font-weight: 300;
+}
+
+.startbutton {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.learnbox span {
+	background-color: rgb(107,124,127);
+	padding: 8px 0px;
+	display: flex;
+	justify-content: center;
+	width: 85%;
+}
+
+.learnbox span a {
+	color: white;
+	font-weight: 300;
+	font-size: 1rem;
+	text-decoration: none;
+}
+
+.learnbox span a:hover {
+	background-color: black;
+	color: white;
+	border-radius: 3px;
+}
+
+.learnbox span a:active {
+	background-color: yellow;
+	color: black;
+	border-radius: 3px;
+}
+
+@media only screen and (max-width: 1079px) {
+
+	body {
+		width: 100%;
+	}
+
+	header {
+		width: 100%;
+	}
+
+	.learbox {
+		margin-top: 0.5rem;
+	}
+
+	.learnbox h1 {
+		font-size: 2rem;
+		margin-bottom: 1rem;
+	}
+
+	.learnbox p {
+		font-size: 1rem;
+		margin-bottom: 1rem;
+	}
+}
+
+@media only screen and (max-width: 600px) {
+
+	body {
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	header {
+		width: 100%;
+	}
+
+	.learncontent {
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+	}
+
+	.mobilegraybox {
+		max-width: 100%;
+    	height: 9.25rem;
+    	background-image: url("../images/books-library.jpeg");
+    	background-position: top;
+    	background-repeat: no-repeat;
+    	background-size: stretch;
+    	display: flex;
+    	padding: 1rem;
+    	margin: 0.5rem;
+	}
+
+	.imaging {
+		display: none;
+	}
+
+	.imagebox {
+		display: none;
+	}
+
+	.learnbox {
+		color: rgb(64,64,64);
+		line-height: 1.4;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		margin: 0;
+	}
+
+	.learnbox h1 {
+		font-weight: bold;
+		font-size: 2rem;
+		margin: 2rem 1rem;
+		width: auto;
+	}
+
+	.learnbox p {
+		font-size: 1.2rem;
+		margin: 0 1rem 1.5rem 1rem;
+		width: auto;
+	}
+
+	.startbutton {
+		display: flex;
+		justify-content: space-around;
+	}
+
+	.learnbox span {
+		background-color: rgb(128,128,128);
+		padding: 8px 0px;
+		margin: 0 1rem 2rem 1rem;
+		width: 100%;
+	}
+
+	.learnbox span a {
+		color: white;
+		font-weight: 400;
+		font-size: 1rem;
+	}
+}
+
+/* Practicing */
+
+.practicecontainer {
+	width: 100%;
+	position: relative;
+	top: 4rem;
+	z-index: 10;
+	background-color: rgb(213,248,255);
+	display: flex;
+}
+
+.practicecontent {
+	padding: 32px 0px 32px 24px;
+	display: flex;
+	color: rgb(16,16,16);
+}
+
+.leftbox {
+	margin-right: 24px;
+}
+
+.emanuel {
+	margin-bottom: 2rem;
+}
+
+.emanuel img {
+	max-width: 100%;
+	height: auto;
+}
+
+.leftbox h1 {
+	font-weight: bold;
+	font-size: 2rem;
+	margin-bottom: 24px;
+}
+
+.leftbox p {
+	font-weight: 100;
+	margin-bottom: 32px;
+}
+
+.leftbox span {
+	font-weight: 300;
+	font-size: 0.75rem;
+}
+
+.righbox {
+	width: 423px;
+	display: flex;
+	flex-direction: column;
+}
+
+.infobox {
+	width: 423px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-content: center;
+}
+
+.desktopic {
+	width: 35%;
+}
+
+.desktopic img {
+	max-width: 100%;
+	height: auto;
+	margin: 1rem;
+	border: 1px solid rgb(220,220,220);
+}
+
+.mobilepic {
+	display: none;
+}
+
+.textbox {
+	color: rgb(16,16,16);
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	margin: 2.5rem 1.5rem 3rem 2rem;
+}
+
+.textbox h2 {
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+	letter-spacing: .4px;
+}
+
+.textbox span {
+	font-weight: 300;
+	font-size: 0.8rem;
+	margin-bottom: 1.2rem;
+}
+
+.textbox a {
+	color: blue;
+	font-weight: 400;
+	font-size: 0.9rem;
+	text-decoration: none;
+}
+
+.textbox a:hover {
+	text-decoration: underline;
+	color: red;
+}
+
+.textbox a:active {
+	text-decoration: underline;
+	color: purple;
+}
+
+#oliver {
+	background-color: rgb(255,233,155);
+}
+
+#olivertext {
+	margin: 0;
+	line-height: 2;
+}
+
+#special {
+	display: none;
+}
+
+.mobilepic {
+	display: none;
 }
