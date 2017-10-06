@@ -490,3 +490,136 @@ h1 {
 .mobilepic {
 	display: none;
 }
+
+/* Start Learning */
+
+.learningcontainer {
+	position: relative;
+	z-index: 10;
+	top: 4rem;
+	background-color: rgb(123,211,229);
+	padding-bottom: 1.5rem;
+
+}
+
+.learningcontainer h1 {
+	color: rgb(16,16,16);
+	font-size: 2rem;
+	font-weight: 500;
+	padding: 2rem 0 1.5rem 0;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+}
+
+.learningbox {
+	color: rgb(64,64,64);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-bottom: 1.5rem;
+	line-height: 1.15;
+}
+
+.subjects {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.subjectbox {
+	height: 276px;
+	width: 280px;
+	display: flex;
+	flex-direction: column;
+	margin: 0.5rem 1rem;
+	background-color: white;
+}
+
+.subjectpic {
+	margin: 0;
+	padding: 0;
+}
+
+.subjectpic img {
+	max-width: 100%;
+	height: auto;
+}
+
+.subjecttext {
+	margin: 0;
+	padding: 0;
+}
+
+.subjecttext h2 {
+	font-size: 1.2rem;
+	font-weight: 500;
+	margin: 0.9rem 0rem 0.5rem 1rem;
+	padding: 0;
+}
+
+.subjecttext span {
+	display: inline-block;
+	margin: 0 0 0.5rem 1rem;
+	color: rgb(52,89,97);
+	font-size: 0.85rem;
+}
+
+.subjecttext span, p {
+	font-weight: 300;
+}
+
+.subjecttext p {
+	margin: 0 0 1.5rem 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+
+	body {
+		width: 100%;
+	}
+
+	.subjectpic img {
+		display: none;
+	}
+
+	.subjecttext span, p {
+		display: none;
+	}
+
+	.learningcontainer {
+		padding-bottom: 1rem;
+	}
+
+	.learningcontainer h1 {
+		padding: 2rem 0 1rem 0;
+	}
+
+	.subjecttext h2 {
+		align-items: center;
+		color: rgb(30,111,127);
+	}
+
+	.subjectbox {
+		height: 3.2rem;
+		width: 90%;
+		margin: 0.5rem;
+		padding: 0;
+		background-color: lightgray;
+	}
+}
+
+/* Thesis Exhibit */
+
+#thesis.learningcontainer {
+	background-color: rgb(109,187,204);
+	padding-bottom: 0;
+}
+
+.learningcontainer {
+	position: relative;
+	z-index: 10;
+	top: 4rem;	
+}
