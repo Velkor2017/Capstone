@@ -618,8 +618,142 @@ h1 {
 	padding-bottom: 0;
 }
 
-.learningcontainer {
+#title {
+	color: rgb(16,16,16);
+	font-size: 2rem;
+	font-weight: 500;
+	padding: 2rem 0 1rem 0;
+	width: 100%;
+	text-align: center;
+}
+
+#thesis.practicecontent {
+	padding-top: 0rem;
+}
+
+#thesis.leftbox {
+	margin-right: 1rem;
+}
+
+.video {
+	margin-bottom: 1.5rem;
+}
+
+#thesis.leftbox h1 {
+	font-size: 1.5rem;
+	text-align: left;
+	margin-bottom: 0.5rem;
+	padding: 0;
+}
+
+#thesis.leftbox p {
+	margin-bottom: 0;
+}
+
+#fisma.rightbox {
+	margin-left: 0;
+	margin-top: 0;
+}
+
+.infobox.dark {
+	background-color: rgb(240,240,240);
+}
+
+#fisma.infobox {
+	width: 423px;
+	height: auto;
+}
+
+#dtext {
+	margin: 0;
+	line-height: 2;
+}
+
+@media only screen and (max-width: 600px) {
+
+	#fisma.rightbox {
+		display: none;
+	}
+
+	#thesis.leftbox {
+		display: block;
+		padding: 0;
+		margin: 0;
+	}
+
+	#thesis.leftbox h1, p {
+		display: none;
+	}
+
+	#thesis.learningcontainer {
+		background-color: rgb(109,187,204);
+		width: 100%;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+	#thesis.practicecontent {
+		max-width: 100%;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+	.video {
+		max-width: 100%;
+		height: auto;
+		padding-bottom: 1.5rem;
+		margin: 0;
+	}
+
+	.video video {
+		max-width: 100%;
+		height: auto;
+		padding: 0;
+		margin: 0 auto;
+	}
+
+	#title {
+		padding: 2rem 0;
+		margin: 0;
+		font-weight: 600;
+	}
+}
+
+/* Footer */
+
+footer {
 	position: relative;
-	z-index: 10;
-	top: 4rem;	
+	z-index: 5;
+	top: 4rem;
+	background-color: white;
+	height: 3rem;
+	max-width: 100%;
+	padding: 1.5rem;
+	display: flex;
+	align-items: center;
+	font-weight: 300;
+	font-size: 0.9rem;
+}
+
+footer span {
+	flex-grow: 1;
+}
+
+footer nav a {
+	padding: 0 0.5rem;
+	text-decoration: none;
+	color: rgb(64,64,64);
+}
+
+@media only screen and (max-width: 600px) {
+
+	footer {
+		padding: 1rem;
+		height: auto;
+		font-size: 0.75rem;
+	}
+
+	footer nav a {
+		display: none;
+	}
 }
